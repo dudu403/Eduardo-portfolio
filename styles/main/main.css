@@ -1,0 +1,78 @@
+@import url('./content/content.css');
+
+.container {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 3% 10%;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.container__links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.container__subtitle {
+    font-family: "Krona One", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.container__link {
+    align-items: center;
+    border: 2px solid var(--blue-color);
+    border-radius: 16px;
+    color: var(--white-color);
+    display: flex;
+    font-family: var(--montserrat-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 16px;
+    justify-content: center;
+    padding: 21.5px 0;
+    text-align: center;
+    width: 50%;
+}
+
+.container__link:hover {
+    background: var(--gray-color);
+}
+
+.container__image {
+    border-radius: 100%;
+    width: 50%;
+    border: 2px solid var(--blue-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .container__content {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .container__link {
+        width: 100%;
+    }
+
+    .container__image {
+        width: 80%;
+    }
+}
+

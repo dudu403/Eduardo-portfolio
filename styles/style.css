@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+/* Importações dos arquivos CSS */
+@import url('./header/header.css');
+@import url('./main/main.css');
+@import url('./footer/footer.css');
+
+/* Suas variáveis --root */
+:root {
+    --black-color: #000000;
+    --blue-color: #22D4FD;
+    --gray-color: #272727;
+    --white-color: #F6F6F6;
+
+    --montserrat-font: "Montserrat", sans-serif;
+    --krona-one-font: "Krona One", sans-serif;
+}
+
+/* Estilos globais para o body */
+body {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-family: var(--montserrat-font);
+    font-size: 16px;
+}
+
+.container__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.pagina-projetos .projeto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.pagina-projetos .proj-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-top: 16px;
+}
+
+.pagina-projetos .container__subtitle,
+.pagina-projetos .content__text {
+    margin: 16px 0;
+}
+
+.container__subtitle {
+    text-align: center;
+}
+
+.container__link {
+    align-items: center;
+    border: 2px solid var(--blue-color);
+    border-radius: 16px;
+    color: var(--white-color);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 16px;
+    justify-content: center;
+    padding: 21.5px 0;
+    text-align: center;
+    width: 50%;
+    text-decoration: none;
+}
+
+.container__link:hover {
+    background: var(--gray-color);
+}
+
+.container__link.email {
+    width: auto; /* Ou ajuste conforme necessário */
+    padding: 10px; /* Ou ajuste conforme necessário */
+}
+
+/* Adicione a classe 'email' ao link de e-mail */
+.container__link[href^="mailto:"] {
+    width: auto; /* Ou ajuste conforme necessário */
+    padding: 10px; /* Ou ajuste conforme necessário */
+}
+
+
+.container__image {
+    border-radius: 100%;
+    width: 50%;
+    border: 2px solid var(--blue-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .container__content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .container__link {
+        width: 100%;
+    }
+
+    .container__image {
+        width: 80%;
+    }
+}
